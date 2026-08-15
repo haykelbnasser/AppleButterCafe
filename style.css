@@ -133,72 +133,37 @@ a { color:inherit; text-decoration:none; }
 .sidebar-top-logo { text-align:center; margin-top:10px; margin-bottom:20px; }
 .sidebar-top-logo img { height:120px; margin:0 auto; display:inline-block; }
 
-/* Nav Links - Right aligned like in screenshot */
+/* Nav Links & Body — Vertically Centered, Right Aligned */
 .sidebar-body {
   display:flex;
   justify-content:flex-end;
+  align-items:center;
   max-width:1100px; width:100%;
-  margin:0 auto;
+  margin:auto auto;
   padding:20px 0;
 }
 .sidebar-nav-right {
   display:flex; flex-direction:column;
   align-items:flex-end;
-  gap:12px;
+  text-align:right;
+  gap:16px;
 }
 .sidebar-link {
   font-family:var(--font-body);
-  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight:400;
   color:#fff;
   cursor:pointer;
   background:none; border:none;
   text-align:right;
-  padding:4px 0;
+  padding:6px 0;
   transition:var(--ease-smooth);
   line-height:1.2;
 }
 .sidebar-link:hover, .sidebar-link.active-page {
   color:var(--amber-light);
-  transform:translateX(-6px);
+  transform:translateX(-8px);
 }
-
-/* Horizontal divider matching screenshot */
-.sidebar-divider {
-  width:100%; max-width:1100px;
-  height:1px;
-  background:rgba(255,255,255,.2);
-  margin:24px auto 32px;
-}
-
-/* Locations Footer matching screenshot */
-.sidebar-locations {
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:30px;
-  max-width:1100px; width:100%;
-  margin:0 auto;
-  text-align:center;
-  color:rgba(255,255,255,.8);
-  font-size:.8rem;
-  line-height:1.75;
-}
-.sidebar-loc-col .loc-title {
-  font-family:var(--font-display);
-  font-size:.95rem;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  color:rgba(255,255,255,.9);
-  display:block;
-  margin-bottom:6px;
-}
-.sidebar-loc-col .loc-city {
-  font-size:.8rem;
-  color:rgba(255,255,255,.7);
-  margin-bottom:6px;
-}
-.sidebar-loc-col p { margin-bottom:4px; font-weight:300; }
-.sidebar-loc-col .loc-hours { margin-top:8px; font-size:.78rem; color:rgba(255,255,255,.75); }
 
 .sidebar-book-btn {
   background:none;
@@ -206,17 +171,19 @@ a { color:inherit; text-decoration:none; }
   border-bottom:1px solid rgba(255,255,255,.7);
   color:#fff;
   font-family:var(--font-body);
-  font-size:.72rem;
-  letter-spacing:2px;
+  font-size:clamp(1.1rem, 2.2vw, 1.5rem);
+  letter-spacing:2.5px;
   text-transform:uppercase;
-  padding:4px 0;
-  margin-top:14px;
+  padding:8px 0 4px;
+  margin-top:24px;
   cursor:pointer;
   transition:var(--ease-smooth);
+  align-self:flex-end;
 }
 .sidebar-book-btn:hover {
   color:var(--amber-light);
   border-color:var(--amber-light);
+  transform:translateX(-8px);
 }
 
 /* ── SCROLL REVEAL ──────────────────────── */
@@ -264,15 +231,93 @@ a { color:inherit; text-decoration:none; }
 .marquee-track .msep { color:var(--amber); font-size:.5rem; }
 @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
-/* ── PAGE HERO (inner pages) ────────────── */
+/* ── PAGE HERO (inner pages - LIGHTER OVERLAY) ────────────── */
 .page-hero { position:relative; padding:160px 0 90px; background:var(--espresso); overflow:hidden; }
-.page-hero-bg { position:absolute; inset:0; background-size:cover; background-position:center; opacity:.22; }
-.page-hero-overlay { position:absolute; inset:0; background:linear-gradient(135deg,rgba(25,15,16,.82),rgba(44,30,31,.68)); }
+.page-hero-bg { position:absolute; inset:0; background-size:cover; background-position:center; opacity:.55; }
+.page-hero-overlay { position:absolute; inset:0; background:linear-gradient(135deg,rgba(25,15,16,.42),rgba(25,15,16,.28)); }
 .page-hero-content { position:relative; z-index:1; }
 .page-hero-label { font-size:.65rem; font-weight:500; letter-spacing:4px; text-transform:uppercase; color:var(--amber); margin-bottom:14px; display:block; }
-.page-hero h1 { font-family:var(--font-display); font-size:clamp(2.6rem,5vw,4.2rem); font-weight:300; color:#fff; line-height:1.1; }
+.page-hero h1 { font-family:var(--font-display); font-size:clamp(2.6rem,5vw,4.2rem); font-weight:300; color:#fff; line-height:1.1; text-shadow:0 2px 10px rgba(0,0,0,0.3); }
 .page-hero h1 em { font-style:italic; color:var(--amber-light); }
 .page-hero-line { width:60px; height:2px; background:var(--amber); margin-top:24px; }
+
+/* ── SPACE CAROUSEL (Full Width Edge-to-Edge) ────────── */
+.space-carousel-wrapper {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  padding: 10px 0;
+}
+.space-carousel-track {
+  display: flex;
+  gap: 20px;
+  padding: 0 40px;
+  transition: transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+.space-carousel-slide {
+  flex: 0 0 calc((100vw - 120px) / 3);
+  height: 380px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--ease-smooth);
+}
+.space-carousel-slide:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+.space-carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.space-carousel-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 18px 24px;
+  background: linear-gradient(to top, rgba(25,15,16,0.8), transparent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.space-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px;
+}
+.space-dot {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: rgba(39,47,60,0.25);
+  border: none;
+  cursor: pointer;
+  transition: var(--ease-smooth);
+}
+.space-dot.active {
+  background: var(--amber);
+  transform: scale(1.3);
+}
+
+@media(max-width:1024px) {
+  .space-carousel-slide {
+    flex: 0 0 calc((100vw - 80px) / 2);
+    height: 320px;
+  }
+}
+@media(max-width:600px) {
+  .space-carousel-slide {
+    flex: 0 0 calc(100vw - 48px);
+    height: 290px;
+  }
+}
 
 /* ── OPENING HOURS — Two Column (Photo LEFT with margins, Text RIGHT centered & closer) ──── */
 .hours-section { background:var(--olive); padding:60px 0; overflow:hidden; }

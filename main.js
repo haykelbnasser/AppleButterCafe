@@ -168,17 +168,92 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (welcomePopup) {
-    const seen = sessionStorage.getItem('ab_welcome_seen');
-    if (!seen) {
-      setTimeout(() => {
-        welcomePopup.classList.add('open');
-        document.body.style.overflow = 'hidden';
-        sessionStorage.setItem('ab_welcome_seen', '1');
-      }, 1400);
-    }
+    // Reliably open popup on every home page visit after 1.2s delay
+    setTimeout(() => {
+      welcomePopup.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }, 1200);
+
     closeWelcomeBtn && closeWelcomeBtn.addEventListener('click', closeWelcome);
     welcomePopup.addEventListener('click', e => { if (e.target === welcomePopup) closeWelcome(); });
     bookNowBtn && bookNowBtn.addEventListener('click', () => { closeWelcome(); setTimeout(openBooking, 200); });
+  }
+
+  /* ── MENU PAGE ENTERING ANIMATION ──────── */
+  const menuGrid = document.getElementById('menuGrid');
+  if (menuGrid) {
+    const visibleCards = Array.from(menuGrid.querySelectorAll('.menu-card')).filter(c => getComputedStyle(c).display !== 'none');
+    visibleCards.forEach((card, idx) => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      setTimeout(() => {
+        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      }, 150 + idx * 60);
+    });
+  }
+
+  /* ── ABOUT PAGE SPACE CAROUSEL (Full Width, Non-Looping) ─── */
+  const spaceTrack = document.getElementById('spaceTrack');
+  const spaceSlides = document.querySelectorAll('.space-carousel-slide');
+  const spaceDots = document.querySelectorAll('.space-dot');
+
+  if (spaceTrack && spaceSlides.length) {
+    let spaceIndex = 0;
+    let spaceDirection = 1;
+    let spaceTimer;
+
+    function getItemsPerView() {
+      if (window.innerWidth <= 600) return 1;
+      if (window.innerWidth <= 1024) return 2;
+      return 3;
+    }
+
+    function showSpaceSlide(idx) {
+      const perView = getItemsPerView();
+      const maxIndex = Math.max(0, spaceSlides.length - perView);
+
+      if (idx > maxIndex) {
+        spaceIndex = maxIndex;
+        spaceDirection = -1; // reverse direction smoothly, no loop jump
+      } else if (idx < 0) {
+        spaceIndex = 0;
+        spaceDirection = 1;
+      } else {
+        spaceIndex = idx;
+      }
+
+      const slideWidth = spaceSlides[0].getBoundingClientRect().width;
+      const gap = 20;
+      const moveDistance = spaceIndex * (slideWidth + gap);
+
+      spaceTrack.style.transform = `translateX(-${moveDistance}px)`;
+      spaceDots.forEach((dot, i) => dot.classList.toggle('active', i === spaceIndex));
+    }
+
+    function autoAdvance() {
+      const perView = getItemsPerView();
+      const maxIndex = Math.max(0, spaceSlides.length - perView);
+
+      if (spaceIndex >= maxIndex) spaceDirection = -1;
+      else if (spaceIndex <= 0) spaceDirection = 1;
+
+      showSpaceSlide(spaceIndex + spaceDirection);
+    }
+
+    function startSpaceTimer() {
+      spaceTimer = setInterval(autoAdvance, 4000);
+    }
+    function resetSpaceTimer() {
+      clearInterval(spaceTimer);
+      startSpaceTimer();
+    }
+
+    spaceDots.forEach((dot, i) => dot.addEventListener('click', () => { showSpaceSlide(i); resetSpaceTimer(); }));
+    window.addEventListener('resize', () => showSpaceSlide(spaceIndex));
+
+    startSpaceTimer();
   }
 
   /* ── BOOKING FORM LOGIC ────────────────── */
