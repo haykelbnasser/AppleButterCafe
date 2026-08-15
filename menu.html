@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apple Butter Cafe Riyadh Menu — Breakfast, Mains, Sandwiches, Salads, Coffee, Drinks and Desserts.">
+  <title>Our Menu | Apple Butter Cafe Riyadh</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="images/logo.svg" alt="Apple Butter Cafe"></a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- SIDEBAR OVERLAY -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- SIDEBAR (FULLSCREEN MATCHING SCREENSHOT) -->
+<aside class="nav-sidebar" id="navSidebar" role="dialog" aria-label="Navigation menu">
+  <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  
+  <div class="sidebar-top-logo">
+    <img src="images/logo.svg" alt="Apple Butter Cafe">
+  </div>
+
+  <div class="sidebar-body">
+    <nav class="sidebar-nav-right">
+      <a href="index.html"   class="sidebar-link" data-page="index.html">Home</a>
+      <a href="about.html"   class="sidebar-link" data-page="about.html">About Us</a>
+      <a href="menu.html"    class="sidebar-link" data-page="menu.html">Our Menus</a>
+      <a href="contact.html" class="sidebar-link" data-page="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <div class="sidebar-divider"></div>
+
+  <div class="sidebar-locations">
+    <div class="sidebar-loc-col">
+      <span class="loc-title">SEVEN DIALS</span>
+      <p class="loc-city">London</p>
+      <p>32-34 Monmouth Street</p>
+      <p>WC2H 9HA</p>
+      <p class="loc-hours">Monday–Friday: 9am – 5pm<br>Saturday–Sunday: 9am – 6pm</p>
+    </div>
+    <div class="sidebar-loc-col">
+      <span class="loc-title">LANGHAM PLACE</span>
+      <p class="loc-city">London</p>
+      <p>4-5 Langham Place</p>
+      <p>W1B 3DG</p>
+      <p class="loc-hours">Monday–Friday: 9am – 5pm<br>Saturday–Sunday: 9am – 6pm</p>
+    </div>
+    <div class="sidebar-loc-col">
+      <span class="loc-title">KAFD</span>
+      <p class="loc-city">Riyadh</p>
+      <p>Area 4</p>
+      <p>Building 4.12</p>
+      <p class="loc-hours">Monday–Sunday: 8am – 12am</p>
+      <button class="sidebar-book-btn" data-open-booking>BOOK A TABLE - RIYADH</button>
+    </div>
+  </div>
+</aside>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('images/LHP-AppleButterCafe-Food-FalafelSandwich-2.jpg')"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <span class="page-hero-label">Crafted Daily</span>
+      <h1>Our <em>Menu</em></h1>
+      <div class="page-hero-line"></div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU SECTION -->
+<section class="menu-page">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Something for Everyone</span>
+      <h2 class="section-title">Wholesome Food, <em>Every Day</em></h2>
+      <p class="section-desc">All dishes are made fresh to order using quality seasonal ingredients. Prices are in SAR.</p>
+    </div>
+
+    <!-- CATEGORY TABS -->
+    <div class="menu-cats reveal" id="menuCats">
+      <button class="menu-cat-btn active" data-cat="breakfast">Breakfast</button>
+      <button class="menu-cat-btn" data-cat="sandwich">Sandwiches</button>
+      <button class="menu-cat-btn" data-cat="mains">Mains</button>
+      <button class="menu-cat-btn" data-cat="salad">Salads</button>
+      <button class="menu-cat-btn" data-cat="coffee">Coffee</button>
+      <button class="menu-cat-btn" data-cat="drinks">Cold Drinks</button>
+      <button class="menu-cat-btn" data-cat="sweet">Desserts</button>
+    </div>
+
+    <!-- MENU GRID -->
+    <div class="menu-grid" id="menuGrid">
+
+      <!-- ─── BREAKFAST ─── -->
+      <div class="menu-card" data-cat="breakfast">
+        <div class="menu-card-img"><img src="images/20230425-ABC-90-683x1024.jpg" alt="Apple Butter Toast" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Apple Butter Toast</h4>
+          <p>House-made apple butter, thick sourdough, candied walnuts, sea salt</p>
+          <span class="menu-tag">Signature</span>
+        </div>
+        <span class="menu-price">32</span>
+      </div>
+
+      <div class="menu-card" data-cat="breakfast">
+        <div class="menu-card-img"><img src="images/LHP-ABC-September2023-49-682x1024.jpg" alt="Avocado Toast" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Smashed Avocado Toast</h4>
+          <p>Heritage tomatoes, feta, chilli flakes, microgreens, poached egg</p>
+          <span class="menu-tag">Bestseller</span>
+        </div>
+        <span class="menu-price">45</span>
+      </div>
+
+      <div class="menu-card" data-cat="breakfast">
+        <div class="menu-card-img"><img src="images/AppleButter_EmmaPharaoh_07March24_128-683x1024.jpg" alt="Full Breakfast" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Apple Butter Full Breakfast</h4>
+          <p>Free-range eggs, turkey bacon, grilled tomato, mushrooms, sourdough</p>
+          <span class="menu-tag">Hearty</span>
+        </div>
+        <span class="menu-price">58</span>
+      </div>
+
+      <div class="menu-card" data-cat="breakfast">
+        <div class="menu-card-img"><img src="images/LHP-AppleButterCafe-AutumnMenu-2-1-683x1024.jpg" alt="Overnight Oats" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Overnight Oats</h4>
+          <p>Coconut milk oats, seasonal compote, toasted granola, fresh fruit</p>
+          <span class="menu-tag">Healthy</span>
+        </div>
+        <span class="menu-price">35</span>
+      </div>
+
+      <div class="menu-card" data-cat="breakfast">
+        <div class="menu-card-img"><img src="images/LHP-ABC-September2023-87-682x1024.jpg" alt="Shakshuka" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Classic Shakshuka</h4>
+          <p>Poached eggs in spiced tomato sauce, feta crumble, fresh herbs, warm bread</p>
+          <span class="menu-tag">Fan Favourite</span>
+        </div>
+        <span class="menu-price">48</span>
+      </div>
+
+      <div class="menu-card" data-cat="breakfast">
+        <div class="menu-card-img"><img src="images/Untitled-design.jpg" alt="Pancakes" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Fluffy Ricotta Pancakes</h4>
+          <p>Light ricotta pancakes, whipped butter, maple syrup, fresh berries</p>
+          <span class="menu-tag">Sweet</span>
+        </div>
+        <span class="menu-price">42</span>
+      </div>
+
+      <div class="menu-card" data-cat="breakfast">
+        <div class="menu-card-img"><img src="images/AppleButter_EmmaPharaoh_07March24_116-683x1024.jpg" alt="Eggs Benedict" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Eggs Benedict</h4>
+          <p>Toasted English muffin, turkey ham, poached eggs, hollandaise sauce</p>
+          <span class="menu-tag">Classic</span>
+        </div>
+        <span class="menu-price">52</span>
+      </div>
+
+      <div class="menu-card" data-cat="breakfast">
+        <div class="menu-card-img"><img src="images/LHP-AppleButterCafe-AutumnMenu-34-683x1024.jpg" alt="Acai Bowl" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Acai Power Bowl</h4>
+          <p>Blended acai, granola, banana, honey, coconut flakes, seasonal fruit</p>
+          <span class="menu-tag">Vegan</span>
+        </div>
+        <span class="menu-price">38</span>
+      </div>
+
+      <!-- ─── SANDWICHES ─── -->
+      <div class="menu-card" data-cat="sandwich" style="display:none">
+        <div class="menu-card-img"><img src="images/LHP-AppleButterCafe-Food-FalafelSandwich-2.jpg" alt="Falafel Wrap" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Crispy Falafel Wrap</h4>
+          <p>Homemade falafel, pickled veg, tahini sauce, fresh herbs, warm pitta</p>
+          <span class="menu-tag">Plant-Based</span>
+        </div>
+        <span class="menu-price">38</span>
+      </div>
+
+      <div class="menu-card" data-cat="sandwich" style="display:none">
+        <div class="menu-card-img"><img src="images/LHP-ABC-September2023-87-682x1024.jpg" alt="Club Sandwich" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Apple Butter Club</h4>
+          <p>Grilled chicken, turkey bacon, avocado, lettuce, tomato, house mayo</p>
+          <span class="menu-tag">Bestseller</span>
+        </div>
+        <span class="menu-price">48</span>
+      </div>
+
+      <div class="menu-card" data-cat="sandwich" style="display:none">
+        <div class="menu-card-img"><img src="images/AppleButter_EmmaPharaoh_07March24_128-683x1024.jpg" alt="Smash Burger" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Double Smash Burger</h4>
+          <p>Double smash patty, aged cheddar, pickles, caramelised onion, house sauce</p>
+          <span class="menu-tag">Signature</span>
+        </div>
+        <span class="menu-price">58</span>
+      </div>
+
+      <div class="menu-card" data-cat="sandwich" style="display:none">
+        <div class="menu-card-img"><img src="images/20230425-ABC-90-683x1024.jpg" alt="Grilled Cheese" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Truffle Grilled Cheese</h4>
+          <p>Three-cheese blend, truffle oil, sourdough, caramelised onion relish</p>
+          <span class="menu-tag">Indulgent</span>
+        </div>
+        <span class="menu-price">42</span>
+      </div>
+
+      <div class="menu-card" data-cat="sandwich" style="display:none">
+        <div class="menu-card-img"><img src="images/LHP-AppleButterCafe-AutumnMenu-2-1-683x1024.jpg" alt="Chicken Pesto Sandwich" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Chicken Pesto Ciabatta</h4>
+          <p>Grilled chicken breast, basil pesto, sun-dried tomatoes, rocket, mozzarella</p>
+          <span class="menu-tag">Fresh</span>
+        </div>
+        <span class="menu-price">46</span>
+      </div>
+
+      <div class="menu-card" data-cat="sandwich" style="display:none">
+        <div class="menu-card-img"><img src="images/MSH00416-scaled-e1768318962369.jpg" alt="Tuna Melt" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Tuna Melt Croissant</h4>
+          <p>Premium tuna, melted cheddar, capers, cornichons, butter croissant</p>
+          <span class="menu-tag">Classic</span>
+        </div>
+        <span class="menu-price">44</span>
+      </div>
+
+      <!-- ─── MAINS ─── -->
+      <div class="menu-card" data-cat="mains" style="display:none">
+        <div class="menu-card-img"><img src="images/AppleButterCafe-LHP-JulyShoot-75-682x1024.jpg" alt="Chicken Salad" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Chargrilled Chicken Plate</h4>
+          <p>Free-range chicken, roasted veg, herbed quinoa, tahini drizzle</p>
+          <span class="menu-tag">Light</span>
+        </div>
+        <span class="menu-price">62</span>
+      </div>
+
+      <div class="menu-card" data-cat="mains" style="display:none">
+        <div class="menu-card-img"><img src="images/MSH00416-scaled-e1768318962369.jpg" alt="Pasta" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Slow-Roasted Tomato Pasta</h4>
+          <p>Pappardelle, slow-roasted cherry tomatoes, basil oil, aged parmesan</p>
+          <span class="menu-tag">Vegetarian</span>
+        </div>
+        <span class="menu-price">55</span>
+      </div>
+
+      <div class="menu-card" data-cat="mains" style="display:none">
+        <div class="menu-card-img"><img src="images/LHP-ABC-September2023-49-682x1024.jpg" alt="Salmon" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Pan-Seared Salmon</h4>
+          <p>Atlantic salmon, crushed potatoes, capers, dill butter, wilted greens</p>
+          <span class="menu-tag">Seafood</span>
+        </div>
+        <span class="menu-price">78</span>
+      </div>
+
+      <div class="menu-card" data-cat="mains" style="display:none">
+        <div class="menu-card-img"><img src="images/LHP-AppleButterCafe-AutumnMenu-34-683x1024.jpg" alt="Grain Bowl" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Seasonal Grain Bowl</h4>
+          <p>Ancient grains, roasted seasonal veg, house dressing, toasted seeds, lemon</p>
+          <span class="menu-tag">Vegan</span>
+        </div>
+        <span class="menu-price">52</span>
+      </div>
+
+      <div class="menu-card" data-cat="mains" style="display:none">
+        <div class="menu-card-img"><img src="images/AppleButter_EmmaPharaoh_07March24_116-683x1024.jpg" alt="Chicken Tagine" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Moroccan Chicken Tagine</h4>
+          <p>Slow-cooked chicken, preserved lemon, olives, couscous, harissa yoghurt</p>
+          <span class="menu-tag">Warmth</span>
+        </div>
+        <span class="menu-price">72</span>
+      </div>
+
+      <div class="menu-card" data-cat="mains" style="display:none">
+        <div class="menu-card-img"><img src="images/Untitled-design.jpg" alt="Beef Steak" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Grilled Beef Tenderloin</h4>
+          <p>120-day aged beef, garlic butter, roasted asparagus, truffle mash</p>
+          <span class="menu-tag">Premium</span>
+        </div>
+        <span class="menu-price">115</span>
+      </div>
+
+      <!-- ─── SALADS ─── -->
+      <div class="menu-card" data-cat="salad" style="display:none">
+        <div class="menu-card-img"><img src="images/LHP-ABC-September2023-87-682x1024.jpg" alt="Caesar Salad" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Caesar Salad</h4>
+          <p>Romaine, shaved parmesan, house caesar dressing, croutons — add chicken +12</p>
+          <span class="menu-tag">Classic</span>
+        </div>
+        <span class="menu-price">42</span>
+      </div>
+
+      <div class="menu-card" data-cat="salad" style="display:none">
+        <div class="menu-card-img"><img src="images/LHP-AppleButterCafe-AutumnMenu-2-1-683x1024.jpg" alt="Fattoush" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Fattoush Salad</h4>
+          <p>Mixed greens, tomatoes, cucumber, radish, sumac dressing, crispy pitta chips</p>
+          <span class="menu-tag">Vegan</span>
+        </div>
+        <span class="menu-price">38</span>
+      </div>
+
+      <div class="menu-card" data-cat="salad" style="display:none">
+        <div class="menu-card-img"><img src="images/AppleButterCafe-LHP-JulyShoot-75-682x1024.jpg" alt="Halloumi Salad" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Grilled Halloumi Salad</h4>
+          <p>Halloumi, roasted peppers, rocket, pomegranate, za'atar vinaigrette</p>
+          <span class="menu-tag">Vegetarian</span>
+        </div>
+        <span class="menu-price">46</span>
+      </div>
+
+      <div class="menu-card" data-cat="salad" style="display:none">
+        <div class="menu-card-img"><img src="images/LHP-AppleButterCafe-Food-FalafelSandwich-2.jpg" alt="Tabbouleh" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Lebanese Tabbouleh</h4>
+          <p>Bulgur wheat, fine parsley, mint, tomatoes, lemon, extra virgin olive oil</p>
+          <span class="menu-tag">Traditional</span>
+        </div>
+        <span class="menu-price">34</span>
+      </div>
+
+      <!-- ─── COFFEE ─── -->
+      <div class="menu-card" data-cat="coffee" style="display:none">
+        <div class="menu-card-img"><img src="images/Untitled-design.jpg" alt="Espresso" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Espresso</h4>
+          <p>Single or double shot, house blend specialty roast</p>
+          <span class="menu-tag">Classic</span>
+        </div>
+        <span class="menu-price">14</span>
+      </div>
+
+      <div class="menu-card" data-cat="coffee" style="display:none">
+        <div class="menu-card-img"><img src="images/LHP-AppleButterCafe-AutumnMenu-34-683x1024.jpg" alt="Flat White" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Flat White</h4>
+          <p>Double ristretto, velvety steamed whole or oat milk</p>
+          <span class="menu-tag">Specialty</span>
+        </div>
+        <span class="menu-price">18</span>
+      </div>
+
+      <div class="menu-card" data-cat="coffee" style="display:none">
+        <div class="menu-card-img"><img src="images/20230425-ABC-90-683x1024.jpg" alt="Apple Butter Latte" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Apple Butter Latte</h4>
+          <p>Signature spiced apple butter syrup, oat milk, double espresso</p>
+          <span class="menu-tag">Signature</span>
+        </div>
+        <span class="menu-price">22</span>
+      </div>
+
+      <div class="menu-card" data-cat="coffee" style="display:none">
+        <div class="menu-card-img"><img src="images/LHP-AppleButterCafe-AutumnMenu-2-1-683x1024.jpg" alt="Cappuccino" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Cappuccino</h4>
+          <p>Espresso, steamed milk, thick velvety foam</p>
+          <span class="menu-tag">Classic</span>
+        </div>
+        <span class="menu-price">18</span>
+      </div>
+
+      <div class="menu-card" data-cat="coffee" style="display:none">
+        <div class="menu-card-img"><img src="images/AppleButter_EmmaPharaoh_07March24_77.jpg" alt="Matcha Latte" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Ceremonial Matcha Latte</h4>
+          <p>Grade A Japanese matcha, steamed oat milk, touch of vanilla</p>
+          <span class="menu-tag">Hot or Iced</span>
+        </div>
+        <span class="menu-price">22</span>
+      </div>
+
+      <div class="menu-card" data-cat="coffee" style="display:none">
+        <div class="menu-card-img"><img src="images/MSH00416-scaled-e1768318962369.jpg" alt="Pour Over" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Single Origin Pour Over</h4>
+          <p>Carefully sourced single-origin beans, brewed to order, served black</p>
+          <span class="menu-tag">Specialty</span>
+        </div>
+        <span class="menu-price">24</span>
+      </div>
+
+      <div class="menu-card" data-cat="coffee" style="display:none">
+        <div class="menu-card-img"><img src="images/LHP-ABC-September2023-49-682x1024.jpg" alt="Cold Brew" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Cold Brew Coffee</h4>
+          <p>Steeped 24 hours, served over ice — straight or with oat milk</p>
+          <span class="menu-tag">Iced</span>
+        </div>
+        <span class="menu-price">20</span>
+      </div>
+
+      <div class="menu-card" data-cat="coffee" style="display:none">
+        <div class="menu-card-img"><img src="images/LHP-AppleButterCafe-Food-FalafelSandwich-2.jpg" alt="Chai Latte" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Spiced Chai Latte</h4>
+          <p>House-blend spiced chai, steamed milk, honey drizzle</p>
+          <span class="menu-tag">Warming</span>
+        </div>
+        <span class="menu-price">20</span>
+      </div>
+
+      <!-- ─── COLD DRINKS ─── -->
+      <div class="menu-card" data-cat="drinks" style="display:none">
+        <div class="menu-card-img"><img src="images/LHP-AppleButterCafe-AutumnMenu-34-683x1024.jpg" alt="Lemonade" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>House Lemonade</h4>
+          <p>Freshly squeezed lemon, mint, cane sugar, still or sparkling</p>
+          <span class="menu-tag">Fresh</span>
+        </div>
+        <span class="menu-price">18</span>
+      </div>
+
+      <div class="menu-card" data-cat="drinks" style="display:none">
+        <div class="menu-card-img"><img src="images/20230425-ABC-90-683x1024.jpg" alt="Fresh Juice" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Cold-Pressed Juices</h4>
+          <p>Rotating seasonal blends — ask your server for today's selection</p>
+          <span class="menu-tag">Seasonal</span>
+        </div>
+        <span class="menu-price">22</span>
+      </div>
+
+      <div class="menu-card" data-cat="drinks" style="display:none">
+        <div class="menu-card-img"><img src="images/AppleButter_EmmaPharaoh_07March24_122.jpg" alt="Smoothie" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Tropical Smoothie</h4>
+          <p>Mango, pineapple, banana, coconut milk, squeeze of lime</p>
+          <span class="menu-tag">Refreshing</span>
+        </div>
+        <span class="menu-price">24</span>
+      </div>
+
+      <div class="menu-card" data-cat="drinks" style="display:none">
+        <div class="menu-card-img"><img src="images/LHP-ABC-September2023-49-682x1024.jpg" alt="Hibiscus" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Hibiscus Iced Tea</h4>
+          <p>Brewed hibiscus, rose water, lemon, cane syrup, served over ice</p>
+          <span class="menu-tag">Floral</span>
+        </div>
+        <span class="menu-price">20</span>
+      </div>
+
+      <div class="menu-card" data-cat="drinks" style="display:none">
+        <div class="menu-card-img"><img src="images/MSH00416-scaled-e1768318962369.jpg" alt="Virgin Mojito" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Virgin Mojito</h4>
+          <p>Muddled mint, lime juice, cane sugar, sparkling water, crushed ice</p>
+          <span class="menu-tag">Classic</span>
+        </div>
+        <span class="menu-price">20</span>
+      </div>
+
+      <!-- ─── DESSERTS ─── -->
+      <div class="menu-card" data-cat="sweet" style="display:none">
+        <div class="menu-card-img"><img src="images/LHP-AppleButterCafe-AutumnMenu-2-1-683x1024.jpg" alt="Apple Cake" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Apple &amp; Cinnamon Cake</h4>
+          <p>Moist spiced apple cake, cream cheese frosting, candied apple chips</p>
+          <span class="menu-tag">Signature</span>
+        </div>
+        <span class="menu-price">28</span>
+      </div>
+
+      <div class="menu-card" data-cat="sweet" style="display:none">
+        <div class="menu-card-img"><img src="images/AppleButter_EmmaPharaoh_07March24_116-683x1024.jpg" alt="Brownie" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Dark Chocolate Brownie</h4>
+          <p>Dense fudgy Valrhona chocolate brownie, sea salt, vanilla ice cream</p>
+          <span class="menu-tag">Indulgent</span>
+        </div>
+        <span class="menu-price">26</span>
+      </div>
+
+      <div class="menu-card" data-cat="sweet" style="display:none">
+        <div class="menu-card-img"><img src="images/LHP-AppleButterCafe-AutumnMenu-34-683x1024.jpg" alt="Fruit Tart" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Seasonal Fruit Tart</h4>
+          <p>Butter pastry, vanilla creme, fresh seasonal fruit, apricot glaze</p>
+          <span class="menu-tag">Seasonal</span>
+        </div>
+        <span class="menu-price">30</span>
+      </div>
+
+      <div class="menu-card" data-cat="sweet" style="display:none">
+        <div class="menu-card-img"><img src="images/MSH00416-scaled-e1768318962369.jpg" alt="Kunafa" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Knafeh with Cream</h4>
+          <p>Shredded pastry, sweet cheese, rose blossom syrup, crushed pistachios</p>
+          <span class="menu-tag">Local Twist</span>
+        </div>
+        <span class="menu-price">32</span>
+      </div>
+
+      <div class="menu-card" data-cat="sweet" style="display:none">
+        <div class="menu-card-img"><img src="images/Untitled-design.jpg" alt="Affogato" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Affogato</h4>
+          <p>Vanilla ice cream, double espresso poured tableside, biscotti on the side</p>
+          <span class="menu-tag">Classic</span>
+        </div>
+        <span class="menu-price">22</span>
+      </div>
+
+      <div class="menu-card" data-cat="sweet" style="display:none">
+        <div class="menu-card-img"><img src="images/LHP-ABC-September2023-87-682x1024.jpg" alt="Cheesecake" loading="lazy"></div>
+        <div class="menu-card-info">
+          <h4>Baked Cheesecake</h4>
+          <p>New York style baked cheesecake, berry compote, whipped cream</p>
+          <span class="menu-tag">Creamy</span>
+        </div>
+        <span class="menu-price">28</span>
+      </div>
+
+    </div><!-- /menu-grid -->
+
+    <div class="menu-cta-bar reveal">
+      <p>Menu changes seasonally. Allergen information available on request.</p>
+      <button class="btn btn-primary" data-open-booking>Book a Table</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logo.svg" alt="Apple Butter Cafe" class="footer-logo">
+        <p>Casual dining crafted with love.<br>Riyadh, Saudi Arabia.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a><a href="about.html">About Us</a>
+        <a href="menu.html">Our Menu</a><a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col"><h4>Hours</h4><p>Sun – Thu: 8:00 AM – 11:00 PM</p><p>Fri – Sat: 8:00 AM – 12:00 AM</p></div>
+      <div class="footer-col"><h4>Contact</h4><p>Olaya District, Riyadh<br>Saudi Arabia</p><p><a href="tel:+966112345678">+966 11 234 5678</a></p></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Apple Butter Cafe Riyadh.</p><p>Crafted with love in Riyadh</p></div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- BOOKING POPUP -->
+<div class="popup-overlay booking-popup" id="bookingPopup" role="dialog" aria-modal="true">
+  <div class="popup-box dark">
+    <button class="popup-close light" id="closeBooking" aria-label="Close">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="popup-body">
+      <span class="popup-eyebrow">Reserve Your Spot</span>
+      <h2 class="popup-title light">Book a <em>Table</em></h2>
+      <p class="popup-subtitle light">Fill in your details and we'll confirm within a few hours.</p>
+      <form class="booking-form" id="bookingForm" novalidate>
+        <div class="form-row">
+          <div class="form-group"><label for="book-name">Full Name *</label><input type="text" id="book-name" placeholder="Your name" required></div>
+          <div class="form-group"><label for="book-phone">Phone *</label><input type="tel" id="book-phone" placeholder="+966 5X XXX XXXX"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label for="book-email">Email</label><input type="email" id="book-email" placeholder="your@email.com"></div>
+          <div class="form-group"><label for="book-guests">Guests</label>
+            <select id="book-guests"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7+">7+</option></select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label for="book-date">Date</label><input type="date" id="book-date"></div>
+          <div class="form-group"><label for="book-time">Time</label>
+            <select id="book-time"><option value="">Select</option><option>08:00 AM</option><option>09:00 AM</option><option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option><option>01:00 PM</option><option>06:00 PM</option><option>07:00 PM</option><option>08:00 PM</option><option>09:00 PM</option><option>10:00 PM</option></select>
+          </div>
+        </div>
+        <div class="form-group"><label for="book-notes">Special Requests</label><textarea id="book-notes" placeholder="Dietary needs, celebrations..."></textarea></div>
+        <button type="submit" class="form-submit">Request Reservation</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apple Butter Cafe Riyadh — Casual dining crafted with love in the heart of Riyadh. Wholesome food, great coffee, warm atmosphere.">
+  <title>Apple Butter Cafe | Riyadh</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+  <img src="images/logo.svg" alt="Apple Butter Cafe" class="preloader-logo">
+  <div class="preloader-line"></div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo" aria-label="Apple Butter Cafe Home">
+      <img src="images/logo.svg" alt="Apple Butter Cafe">
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- SIDEBAR OVERLAY -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- SIDEBAR (FULLSCREEN MATCHING SCREENSHOT) -->
+<aside class="nav-sidebar" id="navSidebar" role="dialog" aria-label="Navigation menu">
+  <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  
+  <div class="sidebar-top-logo">
+    <img src="images/logo.svg" alt="Apple Butter Cafe">
+  </div>
+
+  <div class="sidebar-body">
+    <nav class="sidebar-nav-right">
+      <a href="index.html"   class="sidebar-link" data-page="index.html">Home</a>
+      <a href="about.html"   class="sidebar-link" data-page="about.html">About Us</a>
+      <a href="menu.html"    class="sidebar-link" data-page="menu.html">Our Menus</a>
+      <a href="contact.html" class="sidebar-link" data-page="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <div class="sidebar-divider"></div>
+
+  <div class="sidebar-locations">
+    
+    <div class="sidebar-loc-col">
+      <span class="loc-title">KAFD</span>
+      <p class="loc-city">Riyadh</p>
+      <p>Area 4</p>
+      <p>Building 4.12</p>
+      <p class="loc-hours">Monday–Sunday: 8am – 12am</p>
+      <button class="sidebar-book-btn" data-open-booking>BOOK A TABLE - RIYADH</button>
+    </div>
+  </div>
+</aside>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image:url('images/LHP-AppleButterCafe-Interiors_Exteriors-15.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('images/AppleButter_EmmaPharaoh_07March24_122.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('images/MSH00416-scaled-e1768318962369.jpg')"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow reveal-hero">Riyadh · Casual Dining</span>
+    <h1 class="hero-title reveal-hero rh-d1">Where Every Meal<br>Feels Like <em>Home</em></h1>
+    <p class="hero-subtitle reveal-hero rh-d2">Crafted with love. Served with warmth.</p>
+    <div class="hero-actions reveal-hero rh-d3">
+      <a href="menu.html" class="btn btn-primary">View Our Menu</a>
+      <a href="contact.html" class="btn btn-outline">Find Us</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div>
+  <div class="hero-dots">
+    <button class="slide-dot active" data-slide="0" aria-label="Slide 1"></button>
+    <button class="slide-dot" data-slide="1" aria-label="Slide 2"></button>
+    <button class="slide-dot" data-slide="2" aria-label="Slide 3"></button>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Breakfast</span><span class="msep">&#10022;</span>
+    <span>Brunch</span><span class="msep">&#10022;</span>
+    <span>Lunch</span><span class="msep">&#10022;</span>
+    <span>Dinner</span><span class="msep">&#10022;</span>
+    <span>Riyadh</span><span class="msep">&#10022;</span>
+    <span>KAFD Area 4</span><span class="msep">&#10022;</span>
+    <span>Specialty Coffee</span><span class="msep">&#10022;</span>
+    <span>Fresh Ingredients</span><span class="msep">&#10022;</span>
+    <span>Breakfast</span><span class="msep">&#10022;</span>
+    <span>Brunch</span><span class="msep">&#10022;</span>
+    <span>Lunch</span><span class="msep">&#10022;</span>
+    <span>Dinner</span><span class="msep">&#10022;</span>
+    <span>Riyadh</span><span class="msep">&#10022;</span>
+    <span>KAFD Area 4</span><span class="msep">&#10022;</span>
+    <span>Specialty Coffee</span><span class="msep">&#10022;</span>
+    <span>Fresh Ingredients</span><span class="msep">&#10022;</span>
+  </div>
+</div>
+
+<!-- ===== OPENING HOURS ===== -->
+<section class="hours-section" id="hours">
+  <div class="hours-container">
+    <div class="hours-layout">
+      <!-- LEFT: Photo with margins & styling -->
+      <div class="hours-photo-col reveal-left">
+        <img src="images/AppleButter_EmmaPharaoh_07March24_122.jpg" alt="Apple Butter Cafe Riyadh interior" loading="lazy">
+      </div>
+      <!-- RIGHT: Text centered & closer to image with smaller bordered button -->
+      <div class="hours-content-col reveal-right">
+        <span class="section-label">Come Visit Us</span>
+        <h2 class="section-title light">Find <em>Us</em></h2>
+        <div class="hours-address">
+          <p>Riyadh</p>
+          <p>Area 4</p>
+          <p>Building 4.12</p>
+          <p class="hours-time-text">Monday – Sunday: 8am – 12am</p>
+        </div>
+        <button class="btn btn-bordered-sm" data-open-booking>Book Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="gallery-section" id="gallery">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Gallery</span>
+      <h2 class="section-title">A Feast for the <em>Eyes</em></h2>
+      <p class="section-desc">A glimpse into the world of Apple Butter — our space, our food, our people.</p>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item tall" id="gal-1">
+        <img src="images/20230425-ABC-90-683x1024.jpg" alt="Cafe interior" loading="lazy">
+        <div class="gallery-overlay"><span>Interior</span></div>
+      </div>
+      <div class="gallery-item" id="gal-2">
+        <img src="images/LHP-AppleButterCafe-Food-FalafelSandwich-2.jpg" alt="Falafel Sandwich" loading="lazy">
+        <div class="gallery-overlay"><span>Falafel Wrap</span></div>
+      </div>
+      <div class="gallery-item" id="gal-3">
+        <img src="images/LHP-AppleButterCafe-AutumnMenu-2-1-683x1024.jpg" alt="Seasonal dish" loading="lazy">
+        <div class="gallery-overlay"><span>Seasonal</span></div>
+      </div>
+      <div class="gallery-item wide" id="gal-4">
+        <img src="images/AppleButter_EmmaPharaoh_07March24_128-683x1024.jpg" alt="Cosy dining" loading="lazy">
+        <div class="gallery-overlay"><span>Cosy Dining</span></div>
+      </div>
+      <div class="gallery-item" id="gal-5">
+        <img src="images/LHP-ABC-September2023-49-682x1024.jpg" alt="Dish" loading="lazy">
+        <div class="gallery-overlay"><span>Fresh Plates</span></div>
+      </div>
+      <div class="gallery-item tall" id="gal-6">
+        <img src="images/AppleButterCafe-LHP-JulyShoot-75-682x1024.jpg" alt="Summer menu" loading="lazy">
+        <div class="gallery-overlay"><span>Our Menu</span></div>
+      </div>
+      <div class="gallery-item" id="gal-7">
+        <img src="images/LHP-AppleButterCafe-AutumnMenu-34-683x1024.jpg" alt="Specials" loading="lazy">
+        <div class="gallery-overlay"><span>Specials</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA: VIEW MENU ===== -->
+<section class="cta-banner">
+  <div class="cta-bg" style="background-image:url('images/LHP-AppleButterCafe-Food-FalafelSandwich-2.jpg')"></div>
+  <div class="cta-overlay"></div>
+  <div class="container">
+    <div class="cta-content reveal">
+      <span class="section-label" style="justify-content:center;display:flex">Our Menu</span>
+      <h2 class="section-title light">Something for <em>Every Craving</em></h2>
+      <p>From hearty breakfasts to light bites and indulgent desserts — crafted fresh daily.</p>
+      <a href="menu.html" class="btn btn-primary">Explore the Full Menu</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA: CONTACT ===== -->
+<section class="cta-banner" style="padding:90px 0">
+  <div class="cta-bg" style="background-image:url('images/AppleButter_EmmaPharaoh_07March24_77.jpg')"></div>
+  <div class="cta-overlay" style="background:rgba(25,15,16,.78)"></div>
+  <div class="container">
+    <div class="cta-content reveal">
+      <span class="section-label" style="justify-content:center;display:flex">Find Us</span>
+      <h2 class="section-title light">Visit Us in <em>Riyadh</em></h2>
+      <p>KAFD Area 4, Building 4.12, Riyadh. Open seven days a week.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href="contact.html" class="btn btn-outline">Get Directions</a>
+        <button class="btn btn-primary" data-open-booking>Book a Table</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logo.svg" alt="Apple Butter Cafe" class="footer-logo">
+        <p>Casual dining crafted with love.<br>Riyadh, Saudi Arabia.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/applebuttercafe" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://twitter.com/applebuttercafe" target="_blank" rel="noopener" aria-label="Twitter">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l16 16M4 20L20 4"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@applebuttercafe" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="menu.html">Our Menu</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <p>Mon – Sun: 8:00 AM – 12:00 AM</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>KAFD Area 4, Building 4.12<br>Riyadh, Saudi Arabia</p>
+        <p><a href="tel:+966112345678">+966 11 234 5678</a></p>
+        <p><a href="mailto:riyadh@applebuttercafe.com">riyadh@applebuttercafe.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Apple Butter Cafe Riyadh. All rights reserved.</p>
+      <p>Crafted with love in Riyadh</p>
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- ===== WELCOME POPUP ===== -->
+<div class="popup-overlay" id="welcomePopup" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
+  <div class="popup-box">
+    <button class="popup-close" id="closeWelcome" aria-label="Close">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <img src="images/AppleButter_EmmaPharaoh_07March24_122.jpg" alt="Apple Butter Cafe" class="popup-img">
+    <div class="popup-body">
+      <span class="popup-eyebrow">&#127881; Now Open in Riyadh</span>
+      <h2 class="popup-title" id="welcomeTitle">Reservations Now Open</h2>
+      <p class="popup-subtitle">Join us at KAFD Area 4 for breakfast, brunch, lunch &amp; dinner. Walk-ins welcome — reservations recommended for weekends.</p>
+      <div class="popup-hours">
+        <div class="popup-hours-row">
+          <span class="ph-day">Mon – Sun</span>
+          <span class="ph-time">8:00 AM – 12:00 AM</span>
+        </div>
+      </div>
+      <div class="popup-actions">
+        <button class="btn btn-primary" id="welcomeBookBtn">Book a Table</button>
+        <button class="btn btn-outline-dark" id="closeWelcome2">Maybe Later</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== BOOKING POPUP ===== -->
+<div class="popup-overlay booking-popup" id="bookingPopup" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+  <div class="popup-box dark">
+    <button class="popup-close light" id="closeBooking" aria-label="Close">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="popup-body">
+      <span class="popup-eyebrow">Reserve Your Spot</span>
+      <h2 class="popup-title light" id="bookingTitle">Book a <em>Table</em></h2>
+      <p class="popup-subtitle light">Fill in your details and we'll confirm your reservation within a few hours.</p>
+      <form class="booking-form" id="bookingForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="book-name">Full Name *</label>
+            <input type="text" id="book-name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="book-phone">Phone Number *</label>
+            <input type="tel" id="book-phone" placeholder="+966 5X XXX XXXX">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="book-email">Email Address</label>
+            <input type="email" id="book-email" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label for="book-guests">Number of Guests</label>
+            <select id="book-guests">
+              <option value="1">1 Guest</option>
+              <option value="2" selected>2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="5">5 Guests</option>
+              <option value="6">6 Guests</option>
+              <option value="7+">7+ Guests (Group)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="book-date">Preferred Date</label>
+            <input type="date" id="book-date">
+          </div>
+          <div class="form-group">
+            <label for="book-time">Preferred Time</label>
+            <select id="book-time">
+              <option value="">Select time</option>
+              <option>08:00 AM</option><option>09:00 AM</option>
+              <option>10:00 AM</option><option>11:00 AM</option>
+              <option>12:00 PM</option><option>01:00 PM</option>
+              <option>02:00 PM</option><option>03:00 PM</option>
+              <option>04:00 PM</option><option>05:00 PM</option>
+              <option>06:00 PM</option><option>07:00 PM</option>
+              <option>08:00 PM</option><option>09:00 PM</option>
+              <option>10:00 PM</option><option>11:00 PM</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="book-notes">Special Requests</label>
+          <textarea id="book-notes" placeholder="Dietary requirements, celebrations, high chair needed..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Request Reservation</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('closeWelcome2') && document.getElementById('closeWelcome2').addEventListener('click', () => {
+    document.getElementById('welcomePopup').classList.remove('open');
+    document.body.style.overflow = '';
+  });
+</script>
+<script src="main.js"></script>
+</body>
+</html>
